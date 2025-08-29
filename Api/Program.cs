@@ -1,4 +1,5 @@
 using System.Text;
+using Application.Auth.Commands;
 using Infrastructure.Authentication;
 using Infrastructure.Database;
 using Infrastructure.Repositories;
@@ -58,7 +59,7 @@ builder.Services.AddSwaggerGen(opt =>
 
 // MediatR
 builder.Services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+    cfg.RegisterServicesFromAssembly(typeof(Application.AssemblyMarker).Assembly));
     
 var app = builder.Build();
 
