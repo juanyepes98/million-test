@@ -1,5 +1,6 @@
 using System.Text;
 using Application.Auth.Commands;
+using Application.Common.Mappings;
 using Infrastructure.Authentication;
 using Infrastructure.Database;
 using Infrastructure.Repositories;
@@ -61,6 +62,9 @@ builder.Services.AddSwaggerGen(opt =>
 // MediatR
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Application.AssemblyMarker).Assembly));
+
+// AutoMapper
+builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile).Assembly);
     
 var app = builder.Build();
 

@@ -10,7 +10,7 @@ public class OwnerRepository(MongoDbContext context) : IOwnerRepository
 
     public async Task<Owner> GetByIdAsync(string id)
     {
-        return await _owners.Find(o => o.IdOwner == id).FirstOrDefaultAsync();
+        return await _owners.Find(o => o.Id == id).FirstOrDefaultAsync();
     }
 
     public async Task<IEnumerable<Owner>> GetAllAsync()
@@ -25,17 +25,17 @@ public class OwnerRepository(MongoDbContext context) : IOwnerRepository
 
     public async Task UpdateAsync(Owner owner)
     {
-        await _owners.ReplaceOneAsync(o => o.IdOwner == owner.IdOwner, owner);
+        await _owners.ReplaceOneAsync(o => o.Id == owner.Id, owner);
     }
 
     public async Task DeleteAsync(string id)
     {
-        await _owners.DeleteOneAsync(o => o.IdOwner == id);
+        await _owners.DeleteOneAsync(o => o.Id == id);
     }
     
     public async Task AddPropertyAsync(string ownerId, Property property)
     {
-        var filter = Builders<Owner>.Filter.Eq(o => o.IdOwner, ownerId);
+        var filter = Builders<Owner>.Filter.Eq(o => o.Id, ownerId);
         var update = Builders<Owner>.Update.Push(o => o.Properties, property);
 
         await _owners.UpdateOneAsync(filter, update);
