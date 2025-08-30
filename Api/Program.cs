@@ -21,6 +21,7 @@ builder.Services.AddSingleton<MongoDbContext>();
 
 // Repositorios
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
 
 // JWT
 builder.Services.Configure<JwtSettings>(

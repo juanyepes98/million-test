@@ -16,4 +16,12 @@
       <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Owner\DTOs\" />
+      <Folder Include="Owner\Queries\" />
+      <Folder Include="Property\Commands\" />
+      <Folder Include="Property\DTOs\" />
+      <Folder Include="Property\Queries\" />
+    </ItemGroup>
+
 </Project>

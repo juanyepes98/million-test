@@ -1,8 +1,6 @@
 using Api.Common;
 using Application.Auth.Commands;
 using Application.Auth.DTOs;
-using Infrastructure.Authentication;
-using Infrastructure.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
