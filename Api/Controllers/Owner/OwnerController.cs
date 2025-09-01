@@ -83,6 +83,7 @@ public class OwnerController(IMediator mediator): ControllerBase
         }
     }
     
+    [AllowAnonymous]
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(string id)
     {
