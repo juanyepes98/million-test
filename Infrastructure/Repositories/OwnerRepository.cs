@@ -32,12 +32,4 @@ public class OwnerRepository(MongoDbContext context) : IOwnerRepository
     {
         await _owners.DeleteOneAsync(o => o.Id == id);
     }
-    
-    public async Task AddPropertyAsync(string ownerId, Property property)
-    {
-        var filter = Builders<Owner>.Filter.Eq(o => o.Id, ownerId);
-        var update = Builders<Owner>.Update.Push(o => o.Properties, property);
-
-        await _owners.UpdateOneAsync(filter, update);
-    }
 }

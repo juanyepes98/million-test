@@ -13,5 +13,5 @@ public class Owner
     public string? Photo { get; set; }
     public DateTime Birthday { get; set; }
     
-    public ICollection<Property> Properties { get; set; } = new List<Property>();
+    public ICollection<string> Properties { get; set; } = new List<string>();
 }

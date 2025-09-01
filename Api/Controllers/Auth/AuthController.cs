@@ -1,4 +1,5 @@
 using Api.Common;
+using Api.Common.Helpers;
 using Application.Auth.Commands;
 using Application.Auth.DTOs;
 using MediatR;
@@ -14,32 +15,14 @@ public class AuthController(IMediator mediator)
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginCommand cmd)
     {
-        try
-        {
-            var res = await mediator.Send(cmd);
-            return Ok(ApiResponse<LoginResponseDto>.SuccessResponse(res));
-        }
-        catch (Exception e)
-        {
-            return BadRequest(ApiResponse<LoginResponseDto>.ErrorResponse(e.Message));
-        }
+        return await ControllerHelper.HandleRequestAsync(
+            async () => await mediator.Send(cmd));
     }
     
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterUserCommand cmd)
     {
-        try
-        {
-            var success = await mediator.Send(cmd);
-            
-            if (!success)
-                return BadRequest(ApiResponse<LoginResponseDto>.ErrorResponse("The user already exists."));
-            
-            return Ok(ApiResponse<string>.SuccessResponse("User successfully registered"));
-        }
-        catch (Exception e)
-        {
-            return BadRequest(ApiResponse<LoginResponseDto>.ErrorResponse(e.Message));
-        }
+        return await ControllerHelper.HandleRequestAsync(
+            async () => await mediator.Send(cmd));
     }
 }

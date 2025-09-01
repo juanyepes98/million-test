@@ -9,5 +9,4 @@ public interface IOwnerRepository
     Task AddAsync(Owner owner);
     Task UpdateAsync(Owner owner);
     Task DeleteAsync(string id);
-    Task AddPropertyAsync(string ownerId, Property property);
 }

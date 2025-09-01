@@ -4,16 +4,16 @@ using MediatR;
 
 namespace Application.Auth.Commands;
 
-public record RegisterUserCommand(string Username, string Password) : IRequest<bool>;
+public record RegisterUserCommand(string Username, string Password) : IRequest<string?>;
 
-public class RegisterUserCommandHandler(IUserRepository userRepository) : IRequestHandler<RegisterUserCommand, bool>
+public class RegisterUserCommandHandler(IUserRepository userRepository) : IRequestHandler<RegisterUserCommand, string?>
 {
-    public async Task<bool> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
+    public async Task<string?> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
         // Check if it already exists
         var existing = await userRepository.GetByUsernameAsync(request.Username);
         if (existing != null)
-            return false;
+            throw new Exception("Username already exists.");
 
         // Hashing the password
         var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
@@ -25,6 +25,6 @@ public class RegisterUserCommandHandler(IUserRepository userRepository) : IReque
         };
 
         await userRepository.CreateAsync(user);
-        return true;
+        return user.Id;
     }
 }
