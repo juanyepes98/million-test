@@ -21,9 +21,9 @@ export const Header = () => {
     };
 
     const guestMenu: MenuItem[] = [
-        { label: "Home", href: "/" },
-        { label: "Log In", href: "/login" },
-        { label: "Sign Up", href: "/register" },
+        { label: "HOME", href: "/" },
+        { label: "LOG IN", href: "/login" },
+        { label: "SIGN UP", href: "/register" },
     ];
 
     const authMenu: MenuItem[] = [
@@ -57,7 +57,7 @@ export const Header = () => {
     return (
         <header className="bg-gray-800 text-white shadow-md">
             <div className="container mx-auto px-4 flex justify-between items-center h-16">
-                <h1 className="text-xl font-bold">Million TEST</h1>
+                <h1 className="text-xl font-bold">MILLION TEST</h1>
 
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex gap-6">
