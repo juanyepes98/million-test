@@ -1,0 +1,136 @@
+[{
+  "_id": {
+    "$oid": "68b54a3cde7b0bcd7b174e6e"
+  },
+  "Name": "Luxury Property Test",
+  "Address": "Miami, Florida",
+  "Price": {
+    "$numberDecimal": "750000"
+  },
+  "CodeInternational": "USD",
+  "Year": 2023,
+  "CreatedAt": {
+    "$date": "2025-09-01T07:24:44.100Z"
+  },
+  "UpdatedAt": {
+    "$date": "2025-09-01T07:24:44.100Z"
+  },
+  "OwnerId": "68b50e22fa6a9212ee4da265",
+  "PropertyImages": [
+    {
+      "_id": null,
+      "File": "https://images.pexels.com/photos/21282722/pexels-photo-21282722.jpeg",
+      "Enabled": true
+    }
+  ],
+  "PropertyTraces": [
+    {
+      "_id": null,
+      "DateSale": {
+        "$date": "2024-12-14T05:00:00.000Z"
+      },
+      "Name": "",
+      "Value": {
+        "$numberDecimal": "650000"
+      },
+      "Tax": {
+        "$numberDecimal": "50000"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b54c5bde7b0bcd7b174e6f"
+  },
+  "Name": "Luxury Property Test 2",
+  "Address": "Miami, Florida",
+  "Price": {
+    "$numberDecimal": "850000"
+  },
+  "CodeInternational": "USD",
+  "Year": 2023,
+  "CreatedAt": {
+    "$date": "2025-09-01T07:33:47.041Z"
+  },
+  "UpdatedAt": {
+    "$date": "2025-09-01T07:33:47.041Z"
+  },
+  "OwnerId": "68b50e22fa6a9212ee4da265",
+  "PropertyImages": [
+    {
+      "_id": null,
+      "File": "https://images.pexels.com/photos/19240659/pexels-photo-19240659.jpeg",
+      "Enabled": true
+    }
+  ],
+  "PropertyTraces": [
+    {
+      "_id": null,
+      "DateSale": {
+        "$date": "2024-12-14T05:00:00.000Z"
+      },
+      "Name": "",
+      "Value": {
+        "$numberDecimal": "750000"
+      },
+      "Tax": {
+        "$numberDecimal": "45000"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b54c95de7b0bcd7b174e70"
+  },
+  "Name": "Luxury Property Test 3",
+  "Address": "Miami, Florida",
+  "Price": {
+    "$numberDecimal": "850000"
+  },
+  "CodeInternational": "USD",
+  "Year": 2023,
+  "CreatedAt": {
+    "$date": "2025-09-01T07:34:45.978Z"
+  },
+  "UpdatedAt": {
+    "$date": "2025-09-01T07:34:45.978Z"
+  },
+  "OwnerId": "68b50e22fa6a9212ee4da265",
+  "PropertyImages": [
+    {
+      "_id": null,
+      "File": "https://images.pexels.com/photos/32277880/pexels-photo-32277880.jpeg",
+      "Enabled": true
+    }
+  ],
+  "PropertyTraces": []
+},
+{
+  "_id": {
+    "$oid": "68b54d3dde7b0bcd7b174e71"
+  },
+  "Name": "Luxury Property Test 4",
+  "Address": "Miami, Florida",
+  "Price": {
+    "$numberDecimal": "850000"
+  },
+  "CodeInternational": "USD",
+  "Year": 2023,
+  "CreatedAt": {
+    "$date": "2025-09-01T07:37:33.114Z"
+  },
+  "UpdatedAt": {
+    "$date": "2025-09-01T07:37:33.114Z"
+  },
+  "OwnerId": "68b50e22fa6a9212ee4da265",
+  "PropertyImages": [
+    {
+      "_id": null,
+      "File": "https://images.pexels.com/photos/30159939/pexels-photo-30159939.jpeg",
+      "Enabled": true
+    }
+  ],
+  "PropertyTraces": []
+}]

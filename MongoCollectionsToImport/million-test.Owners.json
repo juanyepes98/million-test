@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "68b50e22fa6a9212ee4da265"
+  },
+  "Name": "Juan Yepes",
+  "Address": "Palmetto Bay",
+  "Photo": "test.jpg",
+  "Birthday": {
+    "$date": "1998-12-06T05:00:00.000Z"
+  },
+  "Properties": []
+}]

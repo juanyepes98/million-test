@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "68b23549d25d89e74a7656dc"
+  },
+  "username": "jyepes",
+  "passwordHash": "$2a$11$pT/E9q9WsBxHw1oepmA6nOOL9Pc5PinNMXI1ubpxWDGWsUHQHZwEm",
+  "createdAt": {
+    "$date": "2025-08-29T23:18:29.734Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68b51cc59c3ef4f6129a17e7"
+  },
+  "username": "jyepes2",
+  "passwordHash": "$2a$11$DbeDw8p.WZ5l0CvFsjqmaed5fwPrcd.oxYVJXQ//eKgMu6d5tj7ya",
+  "createdAt": {
+    "$date": "2025-09-01T04:10:45.817Z"
+  }
+}]
